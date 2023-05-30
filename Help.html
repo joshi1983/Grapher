@@ -1,0 +1,58 @@
+<html>
+<head><title>Help With Coding</title></head>
+<body>
+
+<h2>General</h2>
+<dd>This program creates a graph by plotting the results of a programmed function.  You simply edit the commands in the Code Editor, compile and you get a 3D graph.  If you use the value of the t variable somewhere in the function, you can make an animated 3D graph which is basically 4 dimensional.<br>
+<br>
+<h2>Commands</h2>
+<dd>Each command is done is sequence except in the case of jumps.  When a jump command is executed, the next instruction to be executed will be specified by the parameter.  These jumps are used in loops.
+<dd>For the following explanations of commands, x and y are command parameters and h is a special hidden variable(register).
+<hr>
+
+<b>Abs</b> - h becomes the absolute value of h
+<dd>this means the resulting value of h is always positive.  For example, the absolute value of -4.3 is 4.3<br>
+<b>Add</b> x - adds x to h<br>
+<b>CMP</b> x,y - compares x and y and stores the result in a hidden location to be used again by the JL, JG,JE commands<br>
+<b>Cos</b> - sets h to cos of h,  where the angle is measured in radiens<br>
+<b>Div</b> x - divides h by x<br>
+<b>Hypot</b> x,y - this finds the hypotenuse of a right angle triangle with 2 other sides of length x and y
+<dd>- the result of the calculation is stored in h <br>
+<b>JE</b> x - jumps to another command if the stored comparison is "equal to"<br>
+<b>JG</b> x - jumps to another command if the stored comparison is "greater than"<br>
+<b>JL</b> x - jumps to another command if the stored comparison is "less than"<br>
+<b>JMP</b> x - jumps to another command.  The command # is defined by the value of x<br>
+<b>Load</b> x - sets h to the value of x<br>
+<b>Mov</b> x,y - moves the value from y into x<br>
+<b>Mul</b> x - multiplies the value of h by x<br>
+<b>Saveto</b> x - sets x to the value of h<br>
+<b>Sin</b> - sets h to sin of h,  where the angle is measured in radiens<br>
+<b>Sub</b> x - subtracts x from h<br>
+<b>Tan</b> - sets h to tan of h,  where the angle is measured in radiens<br>
+
+<hr>
+<br>
+<h2>Contact:</h2>
+<dd>email is greijos@hotmail.com
+
+<h2>Version History</h2>
+<h3>Grapher</h3> 
+<dd>A wire frame graphing program that graphed functions that were programmed in an assembly-like script.
+<h3>Grapher 2</h3>
+<ul>
+<li>Alpha blended triangles were used in the graphs.  </li>
+<li>MyMath unit was added to store some 3D vector functions and to calculate the alpha blending ratio for each triangle.  </li>
+<li>MyGraphics unit was added to store the Alpha_triangle procedure.</li>
+The graphics was a little choppy, though.
+</ul>
+
+<h3>Grapher 2.5</h3>
+<ul>
+<li>The alpha blending procedure were optimized with assembly.  </li>
+<li>Another procedure was created to make it even faster when a certain pointer variable is created for a bitmap.</li>
+<li>The pointer record was declared in the MyGraphics unit along with a function to make this pointer for a given bitmap.</li>
+<li>The pointer variable "scan" was added to the Main unit to point to the bit1 bitmap that holds the graph display.</li>
+</ul>
+
+</body>
+</html>
